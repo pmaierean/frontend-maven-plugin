@@ -10,8 +10,8 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
 public class NodeInstaller {
-
-    public static final String INSTALL_PATH = "/node";
+	public static final String PROPERTY_NODE_INSTALL_PATH = "node.install.path";
+    public static final String INSTALL_PATH = System.getProperty(PROPERTY_NODE_INSTALL_PATH, "/node");
 
     public static final String DEFAULT_NODEJS_DOWNLOAD_ROOT = "https://nodejs.org/dist/";
 
